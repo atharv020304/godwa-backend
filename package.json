@@ -1,0 +1,26 @@
+{
+  "name": "godwa-backend",
+  "version": "1.0.0",
+  "description": "godwa website backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "atharv",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "nodemon": "^2.0.22",
+    "validator": "^13.12.0"
+  }
+}
