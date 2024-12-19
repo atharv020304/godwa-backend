@@ -3,7 +3,8 @@ import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import adminRouter from "./Routes/adminRoutes.js";
 import { connection } from "./Database/connection.js";
-import { errHandler, errorMiddleware } from "./Middlewares/errHandler.js"; // Import global error handler
+import { errHandler, errorMiddleware } from "./Middlewares/errHandler.js"; 
+import eventRouter from "./Routes/eventRoutes.js";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Admin Routes
 app.use("/api/v1/admin", adminRouter);
+app.use("/api/v1/event", eventRouter);
 
 // Database connection
 connection();
