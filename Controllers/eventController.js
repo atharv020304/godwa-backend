@@ -77,3 +77,9 @@ export const deleteEvent = asyncHandler(async (req, res, next) => {
         message: "Event deleted successfully",
     });
 });
+
+
+export const fetchEventDetails = asyncHandler(async(req,res,next)=>{
+    const events = await Event.find();
+    res.status(200).json(events);
+})
